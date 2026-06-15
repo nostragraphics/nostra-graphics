@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Work | Nostra Graphics</title>
+	<link rel="icon" type="image/png" href="nostra.png">
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #121212; color: #ffffff; margin: 0; padding: 0; text-align: center; overflow-x: hidden; }
+        nav {
+            background-color: rgba(26, 26, 26, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .logo { font-weight: bold; font-size: 1.2rem; color: #a777e3; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
+        nav a { color: #aaa; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #ffffff; }
+        
+        header {
+            padding: 100px 20px;
+			background-image: url('https://images.unsplash.com/photo-1507499739999-097706ad8914?auto=format&fit=crop&w=1600&q=80');
+			background-size: cover;
+			background-position: center;
+        }
+		.header-glass {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            max-width: 650px;
+            margin: 0 auto;
+            padding: 35px;
+            border-radius: 24px;
+            animation: fadeInHero 1.2s ease-out;
+		}
+        header h1 { margin: 0; font-size: 2.8rem; background: linear-gradient(45deg, #fff, #a777e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        .container {
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .container.visible { opacity: 1; transform: translateY(0); }
+        h2 { border-bottom: 2px solid #a777e3; display: inline-block; padding-bottom: 5px; margin-bottom: 15px; }
+        .section-subtitle { color: #aaa; margin-bottom: 50px; font-size: 1.1rem; }
+
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+        .design-card { background-color: #1e1e1e; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.3); border: 1px solid #333; transition: all 0.3s ease; }
+        .design-card:hover { transform: translateY(-5px) scale(1.02); border-color: #444; }
+        .design-card img { width: 100%; height: 220px; object-fit: cover; display: block; transition: transform 0.5s ease; }
+        .design-card:hover img { transform: scale(1.05); }
+        .card-info { padding: 20px; text-align: left; }
+        .card-info h3 { margin: 0 0 8px 0; font-size: 1.15rem; }
+        .card-info p { margin: 0; color: #aaa; font-size: 0.9rem; line-height: 1.4; }
+
+        footer { background-color: #1a1a1a; padding: 30px 20px; margin-top: 100px; border-top: 1px solid #333; color: #666; font-size: 0.9rem; }
+        @keyframes fadeInHero { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Nostra Graphics Designs</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="work.html" style="color: #ffffff;">Work</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="header-glass">
+            <h1>Featured Work</h1>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Case Studies</h2>
+        <p class="section-subtitle">A close look at successfully delivered projects</p>
+        <div class="gallery">
+            <div class="design-card">
+                <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600&q=80" alt="Logo Design Startup">
+                <div class="card-info">
+                    <h3>Logo Design & Branding</h3>
+                    <p>Modern minimalist logo created for a local tech startup.</p>
+                </div>
+            </div>
+            <div class="design-card">
+                <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600&q=80" alt="Social Media Templates">
+                <div class="card-info">
+                    <h3>Social Media Kit</h3>
+                    <p>Eye-catching Instagram templates for a clothing brand.</p>
+                </div>
+            </div>
+            <div class="design-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMeE75SUvz23Ssg3YSmNxHsMgyekVfyVNWZTDa53M1CBj7sxIAP-o554daEdBI" alt="Music Festival Poster">
+                <div class="card-info">
+                    <h3>Poster / Flyer Design</h3>
+                    <p>Event marketing materials designed for a music festival.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 [Nostra Graphics]. All rights reserved.
+    </footer>
+
+    <script>
+        const containers = document.querySelectorAll('.container');
+        const revealOnScroll = () => {
+            containers.forEach(container => {
+                if (container.getBoundingClientRect().top < (window.innerHeight / 5) * 4.3) {
+                    container.classList.add('visible');
+                }
+            });
+        };
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('DOMContentLoaded', revealOnScroll);
+    </script>
+</body>
+</html>
