@@ -28,7 +28,21 @@
             justify-content: space-between;
             align-items: center;
         }
+        
+        /* Brand Container with Logo */
+        .nav-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .nav-logo {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+        }
         nav .logo { font-weight: bold; font-size: 1.2rem; color: #a777e3; }
+        
         nav ul { list-style: none; margin: 0; padding: 0; display: flex; gap: 20px; }
         nav a { color: #aaa; text-decoration: none; font-weight: 500; transition: color 0.3s, transform 0.2s; display: inline-block; }
         nav a:hover { color: #ffffff; transform: translateY(-2px); }
@@ -87,7 +101,10 @@
 <body>
 
     <nav>
-        <div class="logo">Nostra Graphics Designs</div>
+        <a href="index.html" class="nav-logo-container">
+            <img src="nostra.png" alt="Nostra Graphics Logo" class="nav-logo">
+            <div class="logo">Nostra Graphics Designs</div>
+        </a>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" style="color: #ffffff;">About</a></li>
