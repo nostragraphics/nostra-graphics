@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en)
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
             overflow-x: hidden;
         }
 
-        /* Navigation Men;eeeu */
+        /* Navigation Menu */
         nav {
             background-color: rgba(26, 26, 26, 0.75);
             backdrop-filter: blur(10px);
@@ -31,11 +31,25 @@
             justify-content: space-between;
             align-items: center;
         }
+        
+        /* Brand Container with Logo */
+        .nav-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .nav-logo {
+            height: 32px;
+            width: auto;
+            object-fit: contain;
+        }
         nav .logo {
             font-weight: bold;
             font-size: 1.2rem;
             color: #a777e3;
         }
+        
         nav ul {
             list-style: none;
             margin: 0;
@@ -204,12 +218,37 @@
             color: #666;
             font-size: 0.9rem;
         }
+			/* Container holding the logo and text together */
+	.nav-logo-container {
+		display: flex;
+		align-items: center; /* Centers logo and text vertically */
+		gap: 12px;           /* Adds a nice clean gap between the image and text */
+	}
+
+	/* Controls the size of your logo image */
+	.nav-logo {
+		height: 35px;        /* Matches the standard height of navbar elements */
+		width: auto;         /* Keeps the logo aspect ratio from distorting */
+		object-fit: contain;
+	}
+
+	/* Optional: Styling for the navbar layout if it isn't already set up */
+	.navbar {
+		display: flex;
+		justify-content: space-between; /* Pushes logo container to left, links to right */
+		align-items: center;
+		background-color: #1a151a;     /* Matches your dark navbar background color */
+		padding: 10px 40px;            /* Gives the header contents breathing room */
+	}
     </style>
 </head>
 <body>
 
     <nav>
-        <div class="logo">Nostra Graphics Designs</div>
+        <a href="index.html" class="nav-logo-container">
+            <img src="nostra.png" alt="Nostra Graphics Logo" class="nav-logo">
+            <div class="logo">Nostra Graphics Designs</div>
+        </a>
         <ul>
             <li><a href="#" style="color: #ffffff;">Home</a></li>
             <li><a href="about.html">About</a></li>
